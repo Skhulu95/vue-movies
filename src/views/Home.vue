@@ -13,7 +13,7 @@
   </div>
 
   <form @submit.prevent="SearchMovies()" class="search-box">
-    <input type="text" placeholder="What are you looking for?" v-model="search" />
+    <input type="text" placeholder="Which movie are you looking for?" v-model="search" />
     <input type="submit" value="Search">
   </form>
 
@@ -31,6 +31,7 @@
       </router-link>
     </div>
   </div>
+  <br/>
   </div>
 </template>
 
@@ -69,11 +70,10 @@ export default {
     position: relative;
     .featured-img {
       display: block;
-      width: 100%;
-      height: 300px;
+      width: 500px;
+      height: 500px;
       object-fit: cover;
       position: relative;
-      z-index: 0;
     }
     .detail {
       position: absolute;
@@ -86,9 +86,11 @@ export default {
       h3 {
         color:#FFF;
         margin-bottom: 16px;
+        font-size: 70px;
       }
       p {
         color: #FFF;
+        font-size: 25px;
       }
     }
   }
@@ -105,7 +107,7 @@ export default {
       outline: none;
       background: none;
       &[type="text"] {
-        width: 100%;
+        width: 90%;
         color: #FFF;
         background-color: #496583;
         font-size: 20px;
@@ -141,9 +143,9 @@ export default {
     flex-wrap: wrap;
     margin: 0px 8px;
     .movie {
-      max-width: 50%;
-      flex: 1 1 50%;
-      padding: 16px 8px;
+      max-width: 30%;
+      flex: 1 2 50%;
+      padding: 20px 10px;
       .movie-link {
         display: flex;
         flex-direction: column;
@@ -154,7 +156,7 @@ export default {
           img {
             display: block;
             width: 100%;
-            height: 275px;
+            height: 100%;
             object-fit: cover;
           }
           .type {

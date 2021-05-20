@@ -2,8 +2,13 @@
   <div class="movie-detail">
     <h2>{{movie.Title}}</h2>
     <p>{{ movie.Year }}</p>
-    <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
-    <p>{{ movie.Plot }}</p>
+    
+    <div class="column">
+        <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
+    </div>
+    <div class="column">
+        <p>{{ movie.Plot }}</p>
+    </div>
   </div>
 </template>
 
@@ -34,19 +39,19 @@ export default {
   padding: 16px;
   h2 {
     color: #FFF;
-    font-size: 28px;
+    font-size: 38px;
     font-weight: 600;
     margin-bottom: 16px;
   }
   .featured-img {
     display: block;
-    max-width: 200px;
+    max-width: 500px;
     margin-bottom: 16px;
   }
   p {
     color: #FFF;
-    font-size: 18px;
-    line-height: 1.4;
+    font-size: 20px;
+    line-height: 1.6;
   }
 }
 </style>
