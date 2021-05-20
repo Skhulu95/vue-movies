@@ -13,7 +13,11 @@
   </div>
 
   <form @submit.prevent="SearchMovies()" class="search-box">
+<<<<<<< HEAD
     <input type="text" placeholder="Which movie are you looking for?" v-model="search" />
+=======
+    <input type="text" placeholder="What movie are you looking for?" v-model="search" />
+>>>>>>> a0af8f60c47b40bd58d0cd4cba21bf673cac9eb9
     <input type="submit" value="Search">
   </form>
 
@@ -46,7 +50,7 @@ export default {
 
     const SearchMovies = () => {
       if (search.value != "") {
-        fetch(`http://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`)
+        fetch(`https://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`)
         .then(response => response.json())
         .then(data => {
           movies.value =data.Search;
